@@ -1,3 +1,5 @@
+import { combineReducers } from "redux";
+
 const moviesReducer = () => {
     return [
         {title:'Spider-Man: Homecoming',releaseDate:'05-07-2017',rating:7.4},
@@ -16,3 +18,8 @@ const selectedMovieReducer = (state=null,action) => {
             return state
     }
 }
+
+export default combineReducers({
+    movies:moviesReducer,
+    selectedMovie:selectedMovieReducer
+})
