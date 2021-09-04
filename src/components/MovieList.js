@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { selectMovie } from '../actions/index';
 
 const MovieList = (props) => {
-    const listItems=props.map((movie)=>{
+    const listItems=props.movies.map((movie)=>{
         return (
             <div key={movie.title}>
                 <span>{movie.title}</span>
